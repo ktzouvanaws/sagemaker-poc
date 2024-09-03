@@ -14,11 +14,8 @@ def input_fn(input_data, content_type):
     """
     Deserialize the input data into a format suitable for prediction.
     """
-    if content_type == 'text/csv':
-        data = [[0, 3000, 0, 0, 0, 0]]
-        df = pd.DataFrame(data)
-    else:
-        raise ValueError(f"Unsupported content type: {content_type}")
+    data = [[0, 3000, 0, 0, 0, 0]]
+    df = pd.DataFrame(data)
 
 def predict_fn(input_data, model):
     """
